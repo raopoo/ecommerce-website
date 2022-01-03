@@ -1,0 +1,14 @@
+.grid-img{
+    height: 18rem;
+    width: 15rem;
+}
+
+.grid-class{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-txt{
+    padding: 30px;
+    font-size: 30px;
+}

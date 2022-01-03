@@ -1,0 +1,30 @@
+.headerDiv {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../Container/Images/denim-background.jpg");
+    color: blanchedalmond;
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+
+
+.headerText {
+    padding: 20px;
+}
+.sale-btn {
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-image: linear-gradient(120deg, #9ecafb 0%, #6592b7, #4d8bfd 100%);
+    color:blanchedalmond;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
