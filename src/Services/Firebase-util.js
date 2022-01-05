@@ -9,9 +9,11 @@ export const readAll = async (callback) => {
 
     // Loop through our data
     querySnapshot.forEach((doc) => {
-        console.log(doc.id);
+        const product = {...doc.data()}
+        product.id = doc.id;
+        //console.log(doc.id);
         // Push each dog's data into our array
-        denimArr.push(doc.data());
+        denimArr.push(product);
     });
 
     // denimArr is now an array that contains all of our collections
@@ -24,4 +26,9 @@ export const read = async (id, callback) => {
     const querySnapshot = await firestore.collection("Denim-collection").doc(id).get();
 
     callback(querySnapshot.data());
+};
+
+// Update
+export const update = (id, info) => {
+    firestore.collection("Denim-collection").doc(id).set(info, { merge: true });
 };

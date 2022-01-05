@@ -5,6 +5,7 @@ import Collection from './Pages/Collection/Collection';
 import Nav from "./Components/Nav/Nav";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Cart from './Pages/Cart';
+import Product from './Pages/Product';
 
 function App() {
     
@@ -15,6 +16,7 @@ function App() {
                <Routes>
                    <Route path= "/" element={<Home />} />
                    <Route path= "/Sale" element={<Collection />} />
+                   <Route path= "/product/:id" element={<Product />} />
                    <Route path= "/Cart" element={<Cart />} />
                    <Route path= "*" element={<ErrorPage />} />
                </Routes>

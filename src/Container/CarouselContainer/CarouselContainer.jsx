@@ -1,10 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./CarouselContainer.scss";
-
+import { Link } from "react-router-dom";
 import { readAll } from "../../Services/Firebase-util";
 import { useState, useEffect } from "react";
-
 
 const CarouselContainer = () => {
     const [denimData, setDenimData] = useState([]);
@@ -55,18 +54,20 @@ const CarouselContainer = () => {
                 transitionDuration={1000}
                 className="carousel-div"
             >
-                {
-                    denimData.map((item) => {
-                    
-                        return(
-                            <div>
-                            <h3>{item.Name}</h3>
-                            <img className="car-img" src={item.imgUrl} alt={item.Name} />
+                {denimData.map((item) => {
+                    return (
+                        <div key={item.id}>
+                            <Link to={"/product/" + item.id}>
+                                <h3>{item.Name}</h3>
+                                <img
+                                    className="car-img"
+                                    src={item.imgUrl}
+                                    alt={item.Name}
+                                />
+                            </Link>
                         </div>
-                        )
-                          
+                    );
                 })}
-     
             </Carousel>
         </>
     );
