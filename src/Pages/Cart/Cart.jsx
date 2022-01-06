@@ -4,10 +4,10 @@ import CartItem from '../../Components/CartItem/CartItem';
 const Cart =(order) =>{
 
     return(
-        <>
-            <h1>Items in cart</h1>
-            <CartItem data={order} />
-        </>
+        <div className='cart'>
+            <h1 className='header-text'>Items in cart</h1>
+            <CartItem />
+        </div>
     )
 }
 

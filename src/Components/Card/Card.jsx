@@ -1,20 +1,20 @@
 import "./Card.scss";
-import Cart from "../../Pages/Cart"
+import cartObject from '../cartObject.js';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ item }) => {
+    const [count, setCount] = useState(1);
     let navigate = useNavigate();
     let colorArr = item.Colours;
     let sizeArr = item.Sizes;
+
+    const increment = (n) => {
+        // count++;
+        const newCount = count + n;
+        setCount(newCount);
+    };
     
-    let cartObject = (callback) =>{
-        let cartItem = {
-            Name : item.Name,
-            Quantity: 1,
-            Price: item.Price
-        }
-        callback(cartItem);
-    }
     return (
         <div className="card">
             <h1>{item.Name}</h1>
@@ -50,8 +50,13 @@ const Card = ({ item }) => {
                     <input type="radio" id="no" name="Favourite" value="No" />
                     <label>No</label>
             </div>
+            <div className="count-div">
+            <button className="incBtn" onClick={() => increment(-1)}>-</button>
+            <p>{count}</p>
+            <button className="incBtn" onClick={() => increment(1)}>+</button>
+            </div>
             <button className="card-btn" onClick={() => {
-                cartObject(Cart);
+                cartObject(item,count);
                 navigate("/Cart")}}>
             Add to cart</button>
         </div>

@@ -31,3 +31,18 @@
     width: 10rem;
     height: 1.2rem;
 }
+
+.count-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.incBtn{
+    width: 2rem;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}

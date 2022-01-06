@@ -1,4 +1,29 @@
-.cart-card{
-    border: black 1px solid;
+.cart-grid{
+    display: flex;
+    padding: 1rem;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 30px;
+    justify-content: center;
+    align-items: center;
+
     
+}
+
+.cart-card{
+    background-image: linear-gradient(120deg, #9ecafb 0%, #6592b7, #4d8bfd 100%);
+    border: black 2px solid;
+    width: 15rem;
+    margin: 3rem;
+    padding: 1rem;
+}
+
+.delete-btn{
+    border:none;
+    width: 5rem;
+    height: 1.5rem;
+    margin: 1rem;
+}
+
+.text{
+    margin: 0.5rem;
 }
