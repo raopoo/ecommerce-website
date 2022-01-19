@@ -11,6 +11,7 @@ const CartItem = () => {
 
     useEffect(() => findCartData(), []);
     
+//Using a seperate function for reading cart data as page needs to be refreshed after the items are deleted from the cart
 
     const deleteHandler = (id) =>{
         deleteItem(id);

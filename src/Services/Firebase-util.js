@@ -57,8 +57,6 @@ export const readCart = async (callback) => {
         cartData.push(product);
     });
 
-    // coolDogs is now an array that contains all of our dogs
-    // from the database
 
     callback(cartData);
 };
